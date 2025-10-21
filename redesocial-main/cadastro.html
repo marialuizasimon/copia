@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="Imagens/logoIcone.png" type="image/x-icon">
+        <title>GT Entertainment</title>
+    </head>
+
+    <style>   
+        body{
+            text-align: center;
+            background-color: rgb(245, 236, 255);
+        } 
+        label{
+            display: inline-block;
+        }
+        .quadro{
+            width: 550px;
+            height: 650px;
+            margin-left: 35%;
+            margin-right: 30%;
+            background-color:  rgb(230, 230, 230);
+
+        }
+        .cadastro1{
+            margin-top: 0%;
+            text-align: center;
+            font-size: 200%;
+            display: inline-block;
+        }
+        .nome{
+            font-size: 300%; 
+            color: rgb(237, 152, 248);
+        }
+        .botão{
+            font-size: 90%;
+            border: solid black;
+            background-color: rgb(245, 236, 255);
+        }
+        input{
+            font-size: 80%;
+        }
+    </style>
+
+    <body>
+       
+        <h1 class="nome">GT Entertainment</h1>
+        <section class="quadro">
+            <div class="cadastro1">
+                <h2 style="font-size: 150%">Cadastro de nova conta</h2>
+                <form id="cadastro"></form>
+                <p></p>
+                <label for="nome">Nome completo:</label><br>
+                <input type="text" id="nome" required>
+                <p></p>
+                <label for="user">Insira o user:</label><br>
+                <input type="text" id="user" required>
+                <p></p>
+                <label for="email">Insira o email:</label><br>
+                <input type="text" id="email" required>
+                <p></p>
+                <label for="senha">Insira sua senha:</label><br>
+                <input type="text" id="senha" required>
+                <p></p>
+                <button class="botão" type="submit">Cadastrar</button> 
+            </div>
+        </section>
+        
+        
+        <script>
+            const form = document.getElementById('formulário');
+
+            form.addEventListener('submit', function(event){
+                event.preventDefault();
+                const forms = document.getElementById('cadastro1').value;
+
+                let nome = document.getElementById('nome').value;
+                let user = document.getElementById('user').value;
+                let email = document.getElementById('email').value;
+                let senha = document.getElementById('senha').value;
+
+                alert("Conta cadastrada com sucesso!");
+                
+            })
+        </script>
+
+        
+    </body>
+</html>

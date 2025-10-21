@@ -1,0 +1,93 @@
+        button{
+            background-color: white;
+            color: black;
+            border: solid white;
+        }
+        header{
+            margin-left: 10%;
+            font-size: 200%;
+        }
+        .cima{
+            border: solid black;
+            font-family: monospace;
+
+        }
+        .lado{
+            border: solid black;
+            margin-right: 94%;
+            margin-top: 5%;
+            display: flex;
+        }
+        .post1{
+            width: 528px;
+            height: 779px;
+            margin-left: 125%;
+            margin-right: 30%;
+            background-color:  white;   
+            border: 1px solid rgba(214, 214, 214, 0.856); 
+            border-radius: 2%;   
+               
+        }
+        mark{
+            color: rgb(38, 38, 158);
+            background-color: white;
+        }
+        .legenda{
+            margin-left: 3%;
+        }
+        .post2{
+            width: 528px;
+            height: 710px;
+            margin-left: 125%;
+            margin-right: 30%;
+            background-color:  white;   
+            border: 1px solid rgba(214, 214, 214, 0.856); 
+            margin-top: 20%;
+            margin-bottom: 10%;
+            border-radius: 2%;
+        }
+        .usuario{
+            display: flex;
+        }
+        .post3{
+            width: 528px;
+            height: 710px;
+            margin-left: 125%;
+            margin-right: 30%;
+            background-color:  white;   
+            border: 1px solid rgba(214, 214, 214, 0.856); 
+            margin-top: 20%;
+            margin-bottom: 10%; 
+            border-radius: 2%;
+        }
+        .post4{
+            width: 528px;
+            height: 710px;
+            margin-left: 125%;
+            margin-right: 30%;
+            background-color:  white;   
+            border: 1px solid rgba(214, 214, 214, 0.856); 
+            margin-top: 20%;
+            margin-bottom: 10%;  
+            border-radius: 2%;
+        }
+        .post5{
+            width: 528px;
+            height: 710px;
+            margin-left: 125%;
+            margin-right: 30%;
+            background-color:  white;   
+            border: 1px solid rgba(214, 214, 214, 0.856); 
+            margin-top: 20%;
+            margin-bottom: 10%;
+            border-radius: 2%;
+        }
+        .story{
+            border-radius: 50%;
+            border-width: 4px;
+            border-style: solid;
+            border-top-color: rgb(238, 103, 220);       
+            border-right-color: rgb(252, 249, 63);    
+            border-bottom-color: rgb(157, 1, 172);  
+            border-left-color: rgb(238, 103, 220);
+        }
