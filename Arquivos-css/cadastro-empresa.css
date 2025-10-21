@@ -1,0 +1,418 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: lab(18.9% -25.18 22.49);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6; /* Melhora a legibilidade do texto */
+}
+
+/* --- Cabeçalho --- */
+header {
+    width: 100%;
+    min-height: 80px; /* Use min-height para ser flexível */
+    background-color: hwb(43 92% 5%);
+    padding: 8px 15px; /* Adiciona padding lateral */
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    justify-content: space-between; /* Espaçamento entre os itens */
+    align-items: center;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+#logo-site {
+    width: 150px; /* Ajusta largura inicial da logo */
+    height: auto; /* Mantém proporção */
+    margin-right: 20px; /* Espaçamento da logo */
+    border-radius: 10px;
+    flex-shrink: 0; /* Impede que a logo encolha muito */
+}
+
+header h1 {
+    flex-grow: 1; /* Permite que o título ocupe o espaço restante */
+    font-size: 1.8em; /* Tamanho da fonte mais flexível */
+    margin: 0 20px 0 0; /* Remove margem desnecessária e ajusta a direita */
+    color: #333; /* Cor para o título */
+    text-align: center; /* Centraliza o título */
+}
+
+header a {
+    text-decoration: none;
+    color: hsl(0, 33%, 96%);
+    font-size: 0.95em; /* Ajuste para fonte um pouco menor no botão */
+}
+
+header button {
+    width: 90px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    background-color: hsl(0, 95%, 44%);
+    border-radius: 10px;
+    border: none;
+    padding: 0; /* Remova o padding para controlar com a altura e largura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    flex-shrink: 0; /* Impede que o botão encolha */
+}
+
+header button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+/* --- Container do formulário --- */
+.form-container {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+/* Formulário de registro de empregador */
+.employer-register-form h2 {
+    color: hwb(43 7% 11%);
+    border-bottom: 2px solid #e0e7ff;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 1.6em;
+}
+
+.employer-register-form h2:first-of-type {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="url"],
+.form-group input[type="password"],
+.form-group select,
+.form-group textarea {
+    width: 100%; /* Ajuste para 100% */
+    padding: 12px; /* Aumenta o padding para melhor toque */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Inclui padding na largura total */
+    background-color: #fdfdff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Grupo de endereço - usando grid para organizar em colunas */
+.address-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Colunas flexíveis, min 140px */
+    gap: 15px;
+}
+
+.address-group label {
+    grid-column: span 1;
+    margin-bottom: 0;
+}
+
+.address-group #cep,
+.address-group #estado,
+.address-group #numero {
+    max-width: none; /* Remova o max-width aqui para flexibilidade */
+}
+
+.form-group small {
+    color: #777;
+    font-size: 0.85em;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Checkbox de aceite de termos */
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.checkbox-group label {
+    display: inline;
+    margin-bottom: 0;
+    font-weight: normal;
+    font-size: 0.95em;
+    color: #333;
+}
+
+.checkbox-group label a {
+    color: hwb(85 5% 20%);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.checkbox-group label a:hover {
+    text-decoration: underline;
+}
+
+/* Botão de envio */
+.submit-button {
+    background-color: hsl(0, 86%, 40%);
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: hsl(0, 86%, 25%);
+}
+
+#button-a {
+    color: #fdfdff;
+    text-decoration: none;
+}
+
+/* Link para login */
+.login-link-container {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1em;
+    color: #555;
+}
+
+.login-link-container a {
+    color: hwb(85 5% 20%);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link-container a:hover {
+    text-decoration: underline;
+}
+
+/* --- Rodapé --- */
+.main-footer {
+    background-color: hwb(43 92% 5%);
+    color: #ffffff;
+    padding: 40px 20px; /* Ajusta padding para mobile */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colunas adaptáveis */
+    gap: 30px; /* Espaçamento entre as colunas */
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center; /* Centraliza o texto nas colunas em telas menores */
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza itens em colunas */
+}
+
+.footer-column h4 {
+    font-size: 1.1em;
+    color: lch(2.19% 0 296.81);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Garante que a lista ocupe a largura da coluna */
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li:last-child {
+    margin-bottom: 0;
+}
+
+.footer-column ul li a {
+    color: hsl(0, 0%, 0%);
+    text-decoration: none;
+    font-size: 0.95em;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza os itens do link */
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: lab(39.53% -45.5 43.5);
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* --- Media Queries --- */
+
+/* Para tablets e desktops pequenos (até 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Empilha logo, título e botão */
+        text-align: center;
+        padding: 15px;
+    }
+
+    #logo-site {
+        margin: 0 auto 15px auto; /* Centraliza e adiciona margem inferior */
+    }
+
+    header h1 {
+        font-size: 1.5em;
+        margin: 0 0 15px 0; /* Ajusta margem do título */
+    }
+
+    header button {
+        margin: 0; /* Remove margens extras do botão */
+    }
+
+    .form-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .employer-register-form h2 {
+        font-size: 1.4em;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group input[type="url"],
+    .form-group input[type="password"],
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px; /* Reduz o padding para compactar */
+    }
+
+    .address-group {
+        grid-template-columns: 1fr; /* Volta para uma coluna */
+        gap: 10px;
+    }
+
+    .checkbox-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+        margin-bottom: 10px;
+    }
+
+    .main-footer {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Colunas menores para o footer */
+        gap: 20px;
+        padding: 30px 15px;
+    }
+
+    .footer-column ul li a {
+        justify-content: flex-start; /* Alinha links à esquerda em colunas empilhadas */
+    }
+}
+
+/* Para celulares (até 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    #logo-site {
+        width: 120px; /* Reduz a logo em telas muito pequenas */
+    }
+
+    header h1 {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+
+    .form-container {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    .employer-register-form h2 {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        font-size: 0.9em;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    .submit-button {
+        font-size: 1.1em;
+        padding: 12px 20px;
+        margin-top: 20px;
+    }
+
+    .checkbox-group label {
+        font-size: 0.85em;
+    }
+
+    .main-footer {
+        grid-template-columns: 1fr; /* Uma coluna para o rodapé */
+        gap: 20px;
+        padding: 20px 10px;
+        text-align: left; /* Alinha o texto à esquerda quando em uma coluna */
+    }
+
+    .footer-column {
+        align-items: flex-start; /* Alinha itens da coluna à esquerda */
+    }
+
+    .footer-column ul li a {
+        justify-content: flex-start; /* Garante alinhamento à esquerda para os links */
+    }
+}

@@ -1,0 +1,137 @@
+body{
+    margin: 10px;
+    padding: 10px;
+    background-color: #faf9f6;
+    background-size: cover;/*ajustar para cobrir todo o fundo*/
+    height: 100vh;
+    margin:0%;
+    position: relative;
+}
+ 
+header{
+  width: 100%;
+  height: 95px;
+  background-color:hwb(43 92% 5%);
+  border-radius: 10px;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;  
+  position: sticky;
+  justify-content: space-between;
+}
+#logo-site{ /* logo do site*/
+    width: 182px;
+    height: 95px; /* larguraaa*/
+    margin-left: 10px;
+    margin-right: 800px;
+    border-radius: 10px;
+}
+
+
+#icone-pesquisa{
+    width: 35px;
+    height: 35px; /* larguraaa*/
+    margin-right: 10px;
+}
+
+
+header a{
+     text-decoration: none;/*tirar o sublinhado dos links*/
+    color:hsl(0, 33%, 96%);
+    font-size: 100%;
+}
+
+
+#pesquisa{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+   
+}
+header button{ /* botões do cabeçalho*/
+    margin:10px;
+    width: auto;
+    height: auto;
+    background-color: hsl(0, 95%, 44%);
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
+
+header button:hover{
+  cursor: pointer;
+  opacity: 0.7;
+}
+button{ 
+    margin:10px;
+    width: auto;
+    height: auto;
+    background-color: hsl(0, 95%, 44%);
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    color: white;
+}
+
+ button:hover{
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.main-footer {
+    background-color:  oklab(81.23899999999999% 0.01561 0.16539);
+    color: #ffffff; /* Cor do texto padrão para o footer */
+    padding: 60px 40px; /* Preenchimento interno para espaçamento */
+    display: grid; /* Usa CSS Grid para o layout das colunas */
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas de largura igual */
+    gap: 40px; /* Espaçamento entre as colunas */
+    width: 100%; /* Ocupa toda a largura disponível */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+/* Estilos para cada coluna do footer */
+
+
+.footer-column h4 {
+    font-size: 1.1em; /* Tamanho da fonte para os títulos das colunas */
+    color: lch(7.83% 2.65 144.46);
+    margin-top: 0;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-weight: 600; /* Um pouco mais de peso na fonte */
+}
+
+.footer-column ul {
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px; /* Espaçamento entre os itens da lista */
+}
+
+.footer-column ul li:last-child {
+    margin-bottom: 0; /* Remove a margem do último item */
+}
+
+.footer-column ul li a {
+    color: lch(7.7% 3.47 144.46); /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 0.95em; /* Tamanho da fonte para os links */
+    display: flex; /* Para alinhar ícones e texto */
+    align-items: center;
+    gap: 8px; /* Espaço entre o ícone e o texto */
+    transition: color 0.3s ease; /* Transição suave na cor ao passar o mouse */
+}
+
+.footer-column ul li a:hover {
+    color: #ffffff;
+}
+
+/* Estilo para os ícones sociais dentro dos links */
+.social-icon {
+    width: 20px; /* Tamanho dos ícones sociais */
+    height: 20px;
+    object-fit: contain; /* Garante que o ícone se ajuste sem distorção */
+    /* Pode ser útil se seus ícones forem escuros e você quiser invertê-los para branco */
+}

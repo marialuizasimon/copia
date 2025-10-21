@@ -1,0 +1,583 @@
+/* Universal Box-Sizing for consistent layout */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif; /* Prefer Poppins, fallback to Arial/sans-serif */
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #333; /* Default text color */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* --- Header --- */
+header {
+    width: 100%;
+    min-height: 80px; /* Use min-height for flexibility */
+    background-color: hwb(43 92% 5%); /* Yellowish color */
+    padding: 8px 20px; /* Adjusted padding for header */
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; Removed as order and flex-grow will handle distribution */
+    gap: 10px; /* Space between elements */
+    flex-wrap: wrap; /* Allow header items to wrap to the next line */
+}
+
+#logo-site {
+    width: 150px; /* Slightly smaller for better fit */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain;
+    /* margin-right: auto; Removed, flexbox will handle positioning */
+    padding: 5px 0;
+    flex-shrink: 0; /* Prevent logo from shrinking */
+}
+
+#icone-pesquisa {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    flex-shrink: 0; /* Prevent icon from shrinking */
+    /* Position relative to #pesquisa or move it into the input group */
+}
+
+header a {
+    text-decoration: none;
+    color: hsl(0, 33%, 96%);
+    font-size: 0.95em;
+    font-weight: 600;
+}
+
+#pesquisa {
+    flex-grow: 1; /* Allows search input to take available space */
+    max-width: 300px; /* Limit max width for larger screens */
+    height: 35px;
+    border-radius: 25px;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 20px; /* Space from logo */
+    margin-right: auto; /* Pushes buttons to the right */
+}
+
+header .header-button {
+    margin: 5px 0; /* Adjust margin for stacking */
+    width: auto; /* Auto width based on content */
+    min-width: 100px; /* Minimum width for buttons */
+    height: 40px;
+    background-color: hwb(0 3% 36%);
+    border-radius: 10px;
+    border: none;
+    padding: 0 15px; /* Padding inside the button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Prevent buttons from shrinking too much */
+}
+
+header .header-button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* --- Copilot Sections (Main Content Sections) --- */
+.copilot-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    min-height: 450px; /* Ensure a minimum height for the sections, adjusted slightly */
+    gap: 40px; /* Gap between text and image content */
+}
+
+/* Specific background colors for each section */
+#section-talento-certo {
+    background-color: #fbfbfb; /* Yellowish-orange */
+    color: hwb(0 10% 90%); /* Dark text for this section */
+}
+
+#section-talento-certo .text-content h1 {
+    color: hwb(40 4% 6%); /* Dark purple for heading in this section */
+}
+
+#section-mao-de-obra {
+    background-color: lch(93.84% 6.98 137.11); /* Light grey */
+    color: #333;
+}
+
+#section-mao-de-obra .text-content h1 {
+    color: hsl(135, 70%, 20%); /* Blue for heading in this section */
+}
+
+#section-empresa-diversa {
+    background-color: #fbfbfb; /* Light blue */
+    color: #333;
+}
+
+#section-empresa-diversa .text-content h1 {
+    color: hsl(40, 97%, 45%); /* Green for heading in this section */
+}
+
+#section-empregador-transformador {
+    background-color: lch(93.84% 6.98 137.11); /* Light peach */
+    color: #333;
+}
+
+#section-empregador-transformador .text-content h1 {
+    color: hsl(135, 70%, 20%); /* Red for heading in this section */
+}
+
+.text-content {
+    flex: 1; /* Allows text content to grow */
+    max-width: 550px;
+    /* margin-right: 40px; Replaced by gap on .copilot-section */
+}
+
+.text-content h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.text-content h2 {
+    font-size: 20px;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.text-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.text-content ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.text-content ul li::before {
+    content: '•';
+    color: hsl(0, 95%, 31%);
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 1.05em;
+}
+
+.btn.outlined {
+    border: 2px solid hsl(6, 92%, 39%);
+    color: #e22605;
+    background-color: transparent;
+}
+
+.btn.outlined:hover {
+    background-color: #f4e8f7;
+    color: hsl(0, 95%, 45%);
+}
+
+.image-content {
+    flex: 1; /* Allows image content to grow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px; /* Minimum width for image content */
+    height: 400px; /* Fixed height for image container */
+    overflow: hidden;
+}
+
+.image-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Recrutamento Section --- */
+.recrutamento-section {
+    text-align: center;
+    padding: 60px 40px;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.recrutamento-section h1 {
+    font-size: 38px;
+    font-weight: 700;
+    color: lab(79.7% -2.65 62.73);
+    margin-bottom: 50px;
+    line-height: 1.2;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+}
+
+.card {
+    width: 280px; /* Slightly wider cards for better content fit */
+    text-align: center;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1b1f23;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.botao {
+    margin-top: 30px;
+}
+
+.btn-saiba-mais {
+    display: inline-block;
+    background: hsl(102, 81%, 25%);
+    color: white;
+    padding: 16px 40px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-size: 1.1em;
+}
+
+.btn-saiba-mais:hover {
+    background: hwb(104 3% 74%);
+    transform: translateY(-3px);
+}
+
+/* --- Footer --- */
+.main-footer {
+    background-color: hwb(43 92% 5%);
+    color: #333;
+    padding: 60px 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-column h4 {
+    font-size: 1.2em;
+    color: hsl(112, 80%, 14%);
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 15px;
+}
+
+.footer-column ul li a {
+    color: #555;
+    text-decoration: none;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: hsl(95, 78%, 20%);
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 1200px) {
+    .copilot-section {
+        padding: 50px 60px;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Header adjustments for tablets and smaller desktops */
+    header {
+        flex-direction: column; /* Stack items vertically */
+        height: auto;
+        padding: 15px 20px; /* Adjust padding */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    #logo-site {
+        margin-bottom: 15px; /* Space below logo */
+        width: 120px; /* Make logo a bit smaller */
+    }
+
+    #pesquisa {
+        width: 100%; /* Full width for search input */
+        max-width: 100%; /* Remove max-width constraint */
+        order: 1; /* Place search input after logo but before buttons */
+        margin: 0 0 15px 0; /* Center and add margin */
+    }
+
+    #icone-pesquisa {
+        display: none; /* Hide icon as input is full width with placeholder */
+    }
+
+    header .header-button {
+        width: 100%; /* Full width for buttons */
+        margin: 5px 0; /* Stack buttons vertically */
+    }
+
+    /* Copilot Sections (Text and Image) */
+    .copilot-section {
+        flex-direction: column-reverse; /* Image above text for better flow on mobile */
+        padding: 40px 20px; /* More padding for mobile */
+        text-align: center; /* Center text content */
+    }
+
+    .text-content {
+        max-width: 100%; /* Text takes full width */
+        margin-right: 0; /* Remove margin-right */
+        margin-top: 30px; /* Space between image and text */
+    }
+
+    .image-content {
+        height: 300px; /* Adjust image container height for mobile */
+        min-width: unset; /* Remove min-width */
+        width: 100%; /* Image takes full width */
+    }
+
+    .text-content h1 {
+        font-size: 32px; /* Adjust font size */
+    }
+    .text-content h2 {
+        font-size: 18px; /* Adjust font size */
+    }
+    .text-content ul {
+        text-align: left; /* Keep list items left-aligned */
+        margin-left: auto; /* Center list content */
+        margin-right: auto; /* Center list content */
+        max-width: 400px; /* Max-width for lists for readability */
+    }
+    .text-content ul li {
+        padding-left: 20px; /* Adjust padding for bullet points */
+    }
+    .text-content .buttons {
+        justify-content: center; /* Center buttons */
+    }
+
+    /* Recrutamento Section */
+    .recrutamento-section {
+        padding: 40px 20px;
+    }
+    .recrutamento-section h1 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    .cards {
+        gap: 20px;
+    }
+    .card {
+        width: calc(50% - 15px); /* Two cards per row on tablets */
+    }
+
+    /* Footer */
+    .main-footer {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+        gap: 30px;
+        padding: 40px 20px;
+        text-align: left; /* Align text to left in footer columns */
+    }
+    .footer-column {
+        align-items: flex-start; /* Align footer column content to start */
+    }
+    .footer-column ul li a {
+        justify-content: flex-start; /* Align social links to start */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header */
+    #logo-site {
+        width: 100px; /* Smaller logo for smaller screens */
+    }
+
+    /* Copilot Sections */
+    .copilot-section {
+        padding: 30px 15px; /* Reduced padding */
+    }
+    .text-content h1 {
+        font-size: 26px;
+    }
+    .text-content h2 {
+        font-size: 16px;
+    }
+    .btn {
+        padding: 10px 18px; /* Smaller button padding */
+        font-size: 0.9em;
+    }
+    .buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center stacked buttons */
+    }
+    .btn.outlined {
+        width: 80%; /* Make buttons wider when stacked */
+        max-width: 250px;
+    }
+    .image-content {
+        height: 250px; /* Smaller image container */
+    }
+
+    /* Recrutamento Section */
+    .recrutamento-section h1 {
+        font-size: 24px;
+    }
+    .card {
+        width: 90%; /* Single card per row on small mobiles, with some padding */
+        max-width: 300px; /* Limit max width for a single card */
+    }
+
+    /* Footer */
+    .main-footer {
+        grid-template-columns: 1fr; /* Single column footer on small mobiles */
+        text-align: center; /* Center text when in a single column */
+        padding: 30px 15px;
+    }
+    .footer-column {
+        align-items: center; /* Center content when in a single column */
+    }
+    .footer-column ul li a {
+        justify-content: center; /* Center social icons and text */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header */
+    #pesquisa {
+        height: 30px; /* Smaller search input */
+        font-size: 0.9em;
+    }
+
+    header .header-button {
+        height: 35px; /* Smaller button height */
+        font-size: 0.85em;
+    }
+
+    /* Copilot Sections */
+    .copilot-section {
+        padding: 20px 10px;
+    }
+    .text-content h1 {
+        font-size: 22px;
+    }
+    .text-content h2 {
+        font-size: 14px;
+    }
+    .text-content ul li {
+        font-size: 0.9em;
+    }
+    .image-content {
+        height: 200px; /* Even smaller image container */
+    }
+
+    /* Recrutamento Section */
+    .recrutamento-section h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .card {
+        padding: 15px;
+    }
+    .card h3 {
+        font-size: 16px;
+    }
+    .card p {
+        font-size: 13px;
+    }
+
+    .btn-saiba-mais {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    /* Footer */
+    .main-footer {
+        padding: 20px 10px;
+    }
+    .footer-column h4 {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+    .footer-column ul li {
+        margin-bottom: 10px;
+    }
+    .footer-column ul li a {
+        font-size: 0.9em;
+    }
+    .social-icon {
+        width: 20px;
+        height: 20px;
+    }
+}

@@ -1,0 +1,580 @@
+/* Seus estilos globais, para o footer, etc. */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: oklch(34.396% 0.10856 142.774);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header da Página de Detalhes da Vaga (Topo) */
+.job-detail-header {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.header-content-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Alinhar com o container principal */
+    margin: 0 auto;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: lab(54.21% 77.79 59.51);
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: hwb(0 2% 24%);
+}
+
+.back-link i { /* Ícone de seta */
+    font-size: 1.2em;
+}
+
+.favorite-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: hwb(0 2% 5%); /* Cor roxa do coração */
+    font-size: 1.8em; /* Tamanho do ícone */
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.favorite-btn:hover {
+    color: hsl(0, 85%, 49%);
+    transform: scale(1.1);
+}
+
+.favorite-btn.large-heart { /* Para o coração maior na área principal */
+    font-size: 2.5em;
+    align-self: center; /* Alinha no centro vertical no flexbox */
+}
+
+.apply-btn {
+    background-color: hsl(48, 100%, 50%); /* Cor roxa */
+    color: #ffffff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px; /* Botão mais arredondado */
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+    background-color: hwb(46 2% 20%);
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    background-color: #e9ecef;
+    padding: 10px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.breadcrumbs ul {
+    list-style: none;
+    padding: 0 40px;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.breadcrumbs ul li {
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+.breadcrumbs ul li a {
+    text-decoration: none;
+    color: hwb(121 7% 9%);
+    transition: color 0.3s ease;
+}
+
+.breadcrumbs ul li a:hover {
+    color: hsl(119, 100%, 35%);
+}
+
+.breadcrumbs ul li:not(:last-child)::after {
+    content: '>';
+    margin: 0 8px;
+    color: #6c757d;
+}
+
+/* Main Content da Vaga */
+.job-detail-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header principal da vaga (logo, título, empresa, coração) */
+.job-header-main {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 25px;
+}
+
+.company-logo-large {
+    width: 100px; /* Tamanho da logo maior */
+    height: 100px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    padding: 5px;
+}
+
+.header-info-large {
+    flex-grow: 1; /* Ocupa o espaço restante */
+}
+
+.header-info-large h1 {
+    margin: 0 0 5px 0;
+    font-size: 2.2em;
+    color: hwb(47 1% 95%);
+}
+
+.header-info-large h2 {
+    margin: 0;
+    font-size: 1.3em;
+    color: #555;
+    font-weight: normal;
+}
+
+/* Meta Detalhes da Vaga (Local, Salário, Afirmativa) */
+.job-meta-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 30px; /* Espaço entre itens na linha e entre linhas */
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.meta-item-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1em;
+    color: #555;
+    font-weight: 500;
+}
+
+.meta-item-detail i { /* Ícones dos meta detalhes */
+    color: hsl(57, 96%, 47%); /* Cor roxa */
+    font-size: 1.2em;
+}
+
+.affirmative-action-badge {
+    background-color: #e0f0f0; /* Fundo claro para badges afirmativos */
+    color: #347c7c; /* Cor do texto para badges afirmativos */
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.95em;
+    font-weight: bold;
+}
+
+.affirmative-action-badge i {
+    color: hsl(56, 100%, 53%); /* Cor do ícone */
+}
+
+/* Badges da Vaga (Presencial, CLT, Pleno, etc.) */
+.job-badges-detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.badge-detail {
+    background-color: #e7eef8; /* Fundo azul claro para badges */
+    color: #4a69bd; /* Cor do texto azul */
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+}
+
+/* Para badges específicos, se quiser cores diferentes */
+/* .badge-detail.type-badge { background-color: #d1ecf1; color: #0c5460; } */
+/* .badge-detail.mode-badge { background-color: #d4edda; color: #155724; } */
+/* .badge-detail.level-badge { background-color: #ffeeba; color: #856404; } */
+
+.posted-date-detail {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Seções de Conteúdo */
+.section-company-info,
+.section-job-details,
+.section-how-to-apply {
+    margin-bottom: 40px;
+}
+
+.section-company-info h3,
+.section-job-details h3,
+.section-how-to-apply h3 {
+    font-size: 1.8em;
+    color: #34495e;
+    border-bottom: 2px solid #e0e7ff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.section-company-info h4 { /* Subtítulos como Benefícios */
+    font-size: 1.3em;
+    color: #555;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.section-company-info p,
+.section-job-details p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.company-culture {
+    font-style: italic;
+    color: #666;
+}
+
+.section-company-info ul,
+.section-job-details ul {
+    list-style: disc;
+    margin-left: 25px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.section-how-to-apply ol {
+    list-style: decimal;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Botão grande de candidatar */
+.btn-apply-big {
+    display: block; /* Ocupa a largura total */
+    width: 100%;
+    text-align: center;
+    background-color: hsl(0, 87%, 50%);
+    color: #ffffff;
+    padding: 18px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Garante que padding não estoure a largura */
+}
+
+.btn-apply-big:hover {
+    background-color: hsl(0, 87%, 35%);
+}
+
+.apply-note {
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 15px;
+}
+
+/* Footer (reuse seu CSS existente para .main-footer, .footer-column, etc.) */
+.main-footer {
+    background-color: hwb(43 92% 5%);
+    color: #ffffff; /* Cor do texto padrão para o footer */
+    padding: 60px 40px; /* Preenchimento interno para espaçamento */
+    display: grid; /* Usa CSS Grid para o layout das colunas */
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas de largura igual */
+    gap: 40px; /* Espaçamento entre as colunas */
+    width: 100%; /* Ocupa toda a largura disponível */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+.footer-column h4 {
+    font-size: 1.1em; /* Tamanho da fonte para os títulos das colunas */
+    color: lch(6.29% 12.36 144.44);
+    margin-top: 0;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-weight: 600; /* Um pouco mais de peso na fonte */
+}
+
+.footer-column ul {
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px; /* Espaçamento entre os itens da lista */
+}
+
+.footer-column ul li:last-child {
+    margin-bottom: 0; /* Remove a margem do último item */
+}
+
+.footer-column ul li a {
+    color: hsl(0, 0%, 0%); /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 0.95em; /* Tamanho da fonte para os links */
+    display: flex; /* Para alinhar ícones e texto */
+    align-items: center;
+    gap: 8px; /* Espaço entre o ícone e o texto */
+    transition: color 0.3s ease; /* Transição suave na cor ao passar o mouse */
+}
+
+.footer-column ul li a:hover {
+    color: lab(39.53% -45.5 43.5);
+}
+
+/* Estilo para os ícones sociais dentro dos links */
+.social-icon {
+    width: 20px; /* Tamanho dos ícones sociais */
+    height: 20px;
+    object-fit: contain; /* Garante que o ícone se ajuste sem distorção */
+}
+
+/* Responsividade */
+
+/* Para telas de até 992px (tablets e alguns notebooks menores) */
+@media (max-width: 992px) {
+    .job-detail-header {
+        padding: 15px 20px;
+    }
+    .header-content-top {
+        /* Garante que os elementos dentro do cabeçalho superior se ajustem */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px; /* Espaçamento entre os itens no cabeçalho */
+    }
+    .back-link, .apply-btn, .favorite-btn {
+        flex-basis: 45%; /* Permite que ocupem quase metade da largura em telas menores para melhor toque */
+        text-align: center;
+        justify-content: center; /* Centraliza o conteúdo do link/botão */
+    }
+    .breadcrumbs ul {
+        padding: 0 20px;
+        justify-content: center; /* Centraliza os itens do breadcrumb */
+    }
+    .breadcrumbs ul li:not(:last-child)::after {
+        margin: 0 5px; /* Reduz o espaçamento do ">" */
+    }
+    .job-detail-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+    .job-header-main {
+        flex-direction: column;
+        align-items: center; /* Centraliza logo e títulos */
+        text-align: center;
+        gap: 15px;
+    }
+    .company-logo-large {
+        width: 80px;
+        height: 80px;
+    }
+    .header-info-large h1 {
+        font-size: 1.8em;
+    }
+    .header-info-large h2 {
+        font-size: 1.1em;
+    }
+    .favorite-btn.large-heart {
+        font-size: 2.2em; /* Um pouco menor para caber melhor */
+        margin-top: 0; /* Remove o ajuste negativo, deixa-o no fluxo normal */
+        margin-right: 0;
+        order: -1; /* Move para cima no flexbox para aparecer antes dos títulos */
+    }
+    .job-meta-details {
+        flex-direction: column; /* Empilha os meta itens */
+        align-items: flex-start; /* Alinha à esquerda */
+        gap: 15px;
+    }
+    .job-badges-detail {
+        gap: 8px;
+        justify-content: center; /* Centraliza os badges */
+    }
+    .badge-detail {
+        white-space: normal; /* Permite quebra de linha para badges longos */
+        text-align: center;
+    }
+    .section-company-info h3,
+    .section-job-details h3,
+    .section-how-to-apply h3 {
+        font-size: 1.5em;
+    }
+    .btn-apply-big {
+        font-size: 1.2em;
+        padding: 15px 20px;
+    }
+    .main-footer {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para tablets */
+        gap: 30px;
+        padding: 40px 20px;
+    }
+}
+
+/* Para telas de até 600px (smartphones) */
+@media (max-width: 600px) {
+    .job-detail-header {
+        padding: 10px 15px;
+    }
+    .header-content-top {
+        flex-direction: column; /* Empilha os botões e links */
+        gap: 10px;
+    }
+    .back-link, .apply-btn, .favorite-btn {
+        width: 100%; /* Ocupa a largura total */
+        flex-basis: auto; /* Remove a largura fixa */
+    }
+    .apply-btn {
+        padding: 12px 20px;
+    }
+    .favorite-btn {
+        font-size: 1.5em; /* Reduz o tamanho do coração do topo */
+        order: 1; /* Garante que o botão de favoritar fique por último no topo */
+    }
+    .breadcrumbs ul {
+        padding: 0 15px;
+        font-size: 0.8em;
+        flex-direction: column; /* Empilha o breadcrumb em várias linhas */
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .breadcrumbs ul li:not(:last-child)::after {
+        content: ''; /* Remove o ">" quando empilhado para melhor leitura */
+        margin: 0;
+    }
+    .job-detail-container {
+        padding: 15px;
+        margin: 15px auto;
+    }
+    .company-logo-large {
+        width: 60px; /* Reduz ainda mais a logo */
+        height: 60px;
+    }
+    .header-info-large h1 {
+        font-size: 1.4em;
+    }
+    .header-info-large h2 {
+        font-size: 0.9em;
+    }
+    .favorite-btn.large-heart {
+        font-size: 2em;
+        margin-top: 0; /* Garante que não haja ajustes negativos */
+    }
+    .meta-item-detail {
+        font-size: 0.95em;
+        gap: 8px;
+    }
+    .badge-detail {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+    .section-company-info h3,
+    .section-job-details h3,
+    .section-how-to-apply h3 {
+        font-size: 1.2em;
+    }
+    .section-company-info p,
+    .section-job-details p,
+    .section-company-info ul li,
+    .section-job-details ul li,
+    .section-how-to-apply ol li {
+        font-size: 0.85em;
+    }
+    .btn-apply-big {
+        font-size: 1.1em;
+        padding: 12px 15px;
+    }
+    .main-footer {
+        grid-template-columns: 1fr; /* Uma única coluna para celulares */
+        padding: 30px 15px;
+        gap: 25px;
+        text-align: center; /* Centraliza o texto nas colunas do footer */
+    }
+    .footer-column h4 {
+        margin-bottom: 10px; /* Ajusta o espaçamento do título do footer */
+    }
+    .footer-column ul {
+        margin-bottom: 20px; /* Espaçamento entre as listas */
+    }
+    .footer-column ul li a {
+        justify-content: center; /* Centraliza os links com ícones no footer */
+    }
+}
+
+/* Media Query para telas muito pequenas, abaixo de 375px */
+@media (max-width: 375px) {
+    .job-detail-header, .breadcrumbs ul, .job-detail-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .company-logo-large {
+        width: 50px;
+        height: 50px;
+    }
+    .header-info-large h1 {
+        font-size: 1.2em;
+    }
+    .header-info-large h2 {
+        font-size: 0.85em;
+    }
+    .favorite-btn.large-heart {
+        font-size: 1.8em;
+    }
+    .meta-item-detail {
+        font-size: 0.9em;
+    }
+    .badge-detail {
+        font-size: 0.75em;
+        padding: 5px 10px;
+    }
+    .section-company-info h3,
+    .section-job-details h3,
+    .section-how-to-apply h3 {
+        font-size: 1.1em;
+    }
+    .section-company-info p,
+    .section-job-details p,
+    .section-company-info ul li,
+    .section-job-details ul li,
+    .section-how-to-apply ol li {
+        font-size: 0.8em;
+    }
+    .btn-apply-big {
+        font-size: 1em;
+        padding: 10px 12px;
+    }
+}

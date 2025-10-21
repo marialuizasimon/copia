@@ -1,0 +1,263 @@
+        .introducao{
+            margin: 30px;
+        }
+            .body-legalização {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f2f2f2; /* Fundo cinza claro */
+                color: #333; /* Cor do texto */
+                gap: 10px;
+            }
+
+            /* Menu de navegação */
+            nav {
+                background-color: #fff;
+                padding: 10px;
+                text-align: center;
+                box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+            }
+
+            nav ul {
+                list-style: none; /* Remove os marcadores de lista */
+                padding: 0;
+                display: flex;
+                justify-content: center; /* Centraliza os itens */
+                gap: 20px; /* Espaçamento entre os links */
+            }
+
+            nav a {
+                text-decoration: none; /* Remove o sublinhado */
+                color: #004aad;
+                font-weight: bold;
+            }
+
+            nav a:hover {
+                text-decoration: underline;
+            }
+
+
+            /* Estilo de cada seção */
+            section {
+                margin-bottom: 30px;
+            }
+
+            /* Títulos das seções */
+            section h2 {
+                color: #09632c;
+                border-left: 5px solid #09632c;
+                padding-left: 10px;
+            }
+
+            /* Lista de dicas */
+            ul {
+                margin-top: 10px;
+                padding-left: 20px;
+            }
+
+
+            /* Títulos principais */
+            h1 {
+            margin: 0;
+            }
+
+            /* Seções de conteúdo */
+            section.passo {
+            width: 100%;
+            max-width: 400px;
+            height: auto; /* deixa crescer conforme o conteúdo */
+            margin-bottom: 20px; /* Respiro extra em telas menores */
+            }
+            section.passo:hover {
+                background-color: #f2eedc;
+            }
+
+            section {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+            /* width: 450px; */
+            /* height: 200px; */
+            margin: 10px;
+            }
+            
+            .passoapasso {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 30px; /* AQUI adiciona espaçamento entre os cards */
+                padding: 20px;
+                justify-items: center;
+             }
+            #visto{
+            width: 100%;
+            height: 400px;
+            background-color: #09632c;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            align-items: center;
+            padding: 20px;
+            }
+            #visto h1{
+                text-align: center;
+                color: white;
+                padding: 30px;
+                align-items: center;
+            }
+            .doc-exigidos{
+                background-color: hwb(43 92% 5%); /* Laranja vibrante */
+                padding: 40px 20px;
+                text-align: center;
+                color: rgb(0, 0, 0);
+                height: auto; /* IMPORTANTE: deixa crescer conforme o conteúdo */
+                width: auto;
+            }
+             .doc-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* layout responsivo */
+                gap: 30px; /* espaçamento entre os blocos */
+                margin-top: 20px;
+                }
+
+                /* Cada card */
+                .doc-box {
+                    background-color: white;
+                    color: #222;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+                    text-align: left;
+
+                    /* Animação suave */
+                    transition: transform 0.3s ease;
+                }
+
+                /* Quando passar o mouse */
+                .doc-box:hover {
+                    transform: scale(1.03); /* aumenta levemente (3%) */
+                    background-color: hwb(43 92% 5%);
+                }
+
+
+                /* Título de cada bloco */
+                .doc-box h2 {
+                color: #09632c;
+                margin-bottom: 10px;
+                }
+                /* Links */
+                .doc-box a {
+                color: #004aad;
+                font-weight: bold;
+                }
+                            /* Seção CPF */
+                #cpf {
+                background-color: #FFA902; /* Laranja vibrante */
+                padding: auto auto;
+                text-align: center;
+                color: white;
+                height: auto; /* IMPORTANTE: deixa crescer conforme o conteúdo */
+                width: auto;
+                }
+
+                /* Subtítulo */
+                .intro-cpf {
+                font-size: 1.2em;
+                margin-bottom: 30px;
+                }
+
+                /* Container dos blocos do CPF */
+                .cpf-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* layout responsivo */
+                gap: 30px; /* espaçamento entre os blocos */
+                margin-top: 20px;
+                }
+
+                /* Cada card */
+                .cpf-box {
+                    background-color: white;
+                    color: #222;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+                    text-align: left;
+
+                    /* Animação suave */
+                    transition: transform 0.3s ease;
+                }
+
+                /* Quando passar o mouse */
+                .cpf-box:hover {
+                    transform: scale(1.03); /* aumenta levemente (3%) */
+                }
+
+
+                /* Título de cada bloco */
+                .cpf-box h2 {
+                color: #09632c;
+                margin-bottom: auto;
+                }
+                /* Links */
+                .cpf-box a {
+                color: #004aad;
+                font-weight: bold;
+                }
+                .info-visto{
+                    width: auto;
+                    background-color: hwb(0 100% 0%);
+                    border-radius: 2%;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+                    padding: 2%;
+                    margin-left: 2%;
+                    margin-bottom: 2%;
+                    margin-block: 2%;
+                    text-align: left;
+                }
+                    .passo img{
+                        /* object-fit: cover; */
+                        margin: 30px;
+                    }
+                 .passo em {
+                    background-color: #fff3cd;
+                    padding: 3px 6px;
+                    border-radius: 5px;
+                    color: #856404;
+                    }
+                #ctps {
+                          background-color: hsl(0, 95%, 44%); /* Laranja vibrante */
+                          padding: 20px 40px;
+                          text-align: center;
+                          color: white;
+                          height: auto; /* IMPORTANTE: deixa crescer conforme o conteúdo */
+                          width: auto;
+                }
+                #ctps h2{
+                    color: white;
+                    border-left: 0px;
+                }
+                .ctps-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* layout responsivo */
+                gap: 30px; /* espaçamento entre os blocos */
+                margin-top: 20px;
+                padding: 10px;
+                }
+
+                /* Cada card */
+                .ctps-box {
+                    background-color: white;
+                    color: #222;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+                    text-align: left;
+
+                    /* Animação suave */
+                    transition: transform 0.3s ease;
+                }
+
+                /* Quando passar o mouse */
+                .ctps-box:hover {
+                    transform: scale(1.03); /* aumenta levemente (3%) */
+                }

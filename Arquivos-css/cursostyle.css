@@ -1,0 +1,79 @@
+            .modulos-todos{
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                }
+            .modulo{
+                margin: 10px;
+                padding: 10px;
+                background-color:hwb(0 100% 0%);
+                border-radius: 10px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+                width: 400px;
+                height: 450px;
+                transition: transform 0.3s ease;
+            }
+            .modulo:hover{
+                transform: scale(1.03);
+            }
+                        /* Seção geral */
+            .material-apoio {
+            background-color: #fefefe;
+            padding: 20px;
+            }
+
+            .material-apoio h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #222;
+            }
+
+            /* Container dos cards */
+            .reforco {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            }
+
+            /* Cada card individual */
+            .material {
+            width: 200px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            }
+
+            .material:hover {
+                background-color:hwb(43 92% 5%);
+            }
+
+            .material img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            }
+
+            .material h3 {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #333;
+            }
+
+            /* Botão de download */
+            .material button {
+            background-color: #e60000;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            }
+
+            .material button:hover {
+            background-color: #c40000;
+            }

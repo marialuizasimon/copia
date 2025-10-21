@@ -1,0 +1,61 @@
+          .introducion{
+            margin: 10px;
+          }
+          .body-curriculo {
+            font-family: Arial, sans-serif; /* Tipo de fonte */
+            margin: 20px; /* Espaço em volta do conteúdo */
+            background-color: #f9f9f9; /* Cor de fundo clara */
+          }
+
+          /* Estilo do texto explicativo */
+          .explicacao {
+            font-size: 0.95em; /* Tamanho levemente menor que o normal */
+            color: #686868; /* Cinza escuro */
+            margin-bottom: 15px;
+          }
+
+          /* Formulário centralizado e com bordas suaves */
+          .form-curriculo {
+            background: white; /* Fundo branco */
+            padding: 20px;
+            border-radius: 10px; /* Arredonda os cantos */
+            max-width: 700px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra leve ao redor */
+          }
+
+          /* Remove bordas padrão dos fieldsets */
+          fieldset {
+            border: none;
+            margin-bottom: 20px;
+          }
+
+          /* Estilo dos rótulos (label) */
+          label {
+            display: block;
+            margin-top: 10px;
+          }
+
+          /* Estilo dos campos de entrada, seleção e texto */
+          input, textarea, select {
+            width: 100%; /* Ocupa toda a largura do container */
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc; /* Borda cinza clara */
+            border-radius: 5px;
+          }
+          .imagem-fundo-curriculo img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+          }
+          .fundo-curriculo{
+            background-color: #FFA902;
+            margin-top: 30px;
+            padding: 30px;
+            margin-bottom: 30px;
+          }
+
+      #vagas-abertas{
+           white-space: nowrap;
+      }

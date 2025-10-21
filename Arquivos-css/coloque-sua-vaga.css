@@ -1,0 +1,353 @@
+/* Geral da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: lch(21.12% 39.95 136.65);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6; /* Melhorar legibilidade do texto */
+}
+
+/* --- Cabeçalho --- */
+header {
+    width: 100%;
+    min-height: 80px; /* Altura mínima para ser flexível */
+    background-color: hwb(43 92% 5%);
+    padding: 8px 15px; /* Padding lateral para melhor visual em telas menores */
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha para os itens */
+    justify-content: space-between; /* Espaçamento entre logo/título e botão */
+    align-items: center;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+#logo-site {
+    width: 150px; /* Largura inicial da logo */
+    height: auto; /* Mantém a proporção */
+    margin-right: 20px;
+    border-radius: 10px;
+    flex-shrink: 0; /* Impede que a logo encolha demais */
+}
+
+header h1 {
+    flex-grow: 1; /* Permite que o título ocupe o espaço restante */
+    font-size: 1.8em; /* Tamanho da fonte mais flexível */
+    margin: 0 20px 0 0; /* Remove margens desnecessárias e ajusta a direita */
+    color: #333; /* Cor para o título */
+    text-align: center; /* Centraliza o título */
+}
+
+header a {
+    text-decoration: none;
+    color: hsl(0, 33%, 96%);
+    font-size: 0.95em;
+}
+
+header button {
+    width: auto; /* Deixa a largura automática para o conteúdo */
+    height: 40px; /* Altura fixa para o botão */
+    background-color: hsl(0, 95%, 44%);
+    border-radius: 10px;
+    border: none;
+    padding: 0 15px; /* Padding interno para o botão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    flex-shrink: 0; /* Impede que o botão encolha */
+}
+
+header button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+/* Container do formulário */
+.form-container {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+/* Formulário */
+.job-post-form h2 {
+    color: hsl(50, 97%, 46%);
+    border-bottom: 2px solid #e0e7ff;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 1.6em;
+}
+
+.job-post-form h2:first-of-type {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="url"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: 100%; /* Definido como 100% para preencher o container */
+    padding: 12px; /* Aumenta o padding para melhor toque */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Inclui padding e border na largura */
+    background-color: #fdfdff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Grupo de localização - Duas colunas em telas maiores */
+.location-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas */
+    gap: 20px;
+}
+
+.location-group label {
+    grid-column: span 2; /* Faz o label ocupar 2 colunas */
+    margin-bottom: 0; /* Remove margem extra */
+}
+
+.location-group input,
+.location-group select {
+    width: 100%; /* Ocupa a largura da sua coluna no grid */
+    margin-top: 8px; /* Adiciona margem acima para separar do label quebrado */
+}
+
+.form-group small {
+    color: #777;
+    font-size: 0.85em;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Botão de envio */
+.submit-button {
+    background-color: hsl(0, 97%, 41%);
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: block;
+    width: 100%; /* Ocupa a largura total */
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: hwb(0 5% 33%);
+}
+
+/* --- Rodapé --- */
+.main-footer {
+    background-color: hwb(43 92% 5%);
+    color: #ffffff;
+    padding: 40px 20px; /* Ajusta padding para mobile */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colunas adaptáveis */
+    gap: 30px; /* Espaçamento entre as colunas */
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center; /* Centraliza o texto nas colunas em telas menores */
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza itens em colunas */
+}
+
+.footer-column h4 {
+    font-size: 1.1em;
+    color: lch(6.52% 1.6 144.47); /* Mantenha a cor original, se for essa a intenção */
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Garante que a lista ocupe a largura da coluna */
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li:last-child {
+    margin-bottom: 0;
+}
+
+.footer-column ul li a {
+    color: hsl(0, 0%, 0%);
+    text-decoration: none;
+    font-size: 0.95em;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza os itens do link */
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: lab(39.53% -45.5 43.5);
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* --- Media Queries --- */
+
+/* Para tablets e desktops pequenos (até 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Empilha logo, título e botão */
+        text-align: center;
+        padding: 15px;
+    }
+
+    #logo-site {
+        margin: 0 auto 15px auto; /* Centraliza e adiciona margem inferior */
+    }
+
+    header h1 {
+        font-size: 1.5em;
+        margin: 0 0 15px 0; /* Ajusta margem do título */
+    }
+
+    header button {
+        margin: 0; /* Remove margens extras do botão */
+        padding: 8px 12px; /* Ajusta o padding para o botão */
+    }
+
+    .form-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .job-post-form h2 {
+        font-size: 1.4em;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px; /* Reduz o padding para compactar */
+    }
+
+    .location-group {
+        grid-template-columns: 1fr; /* Volta para uma coluna */
+        gap: 10px;
+    }
+
+    .location-group label {
+        grid-column: span 1; /* Label ocupa 1 coluna */
+    }
+
+    .location-group input,
+    .location-group select {
+        margin-top: 0; /* Remove margem extra adicionada para layout de 2 colunas */
+    }
+
+    .main-footer {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Colunas menores para o footer */
+        gap: 20px;
+        padding: 30px 15px;
+    }
+
+    .footer-column ul li a {
+        justify-content: flex-start; /* Alinha links à esquerda em colunas empilhadas */
+    }
+}
+
+/* Para celulares (até 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    #logo-site {
+        width: 120px; /* Reduz a logo em telas muito pequenas */
+    }
+
+    header h1 {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+
+    .form-container {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    .job-post-form h2 {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        font-size: 0.9em;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    .submit-button {
+        font-size: 1.1em;
+        padding: 12px 20px;
+        margin-top: 20px;
+    }
+
+    .main-footer {
+        grid-template-columns: 1fr; /* Uma coluna para o rodapé */
+        gap: 20px;
+        padding: 20px 10px;
+        text-align: left; /* Alinha o texto à esquerda quando em uma coluna */
+    }
+
+    .footer-column {
+        align-items: flex-start; /* Alinha itens da coluna à esquerda */
+    }
+
+    .footer-column ul li a {
+        justify-content: flex-start; /* Garante alinhamento à esquerda para os links */
+    }
+}

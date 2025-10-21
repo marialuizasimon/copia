@@ -1,0 +1,632 @@
+body{
+    background-color: hsl(40, 5%, 88%);
+    background-size: cover;/*ajustar para cobrir todo o fundo*/
+    height: 100vh; 
+    margin:0%;
+    position: relative;
+    padding: 0%;
+    
+}
+header{
+  width: 100%;
+  height: 95px; 
+  background-color:hwb(43 92% 5%);
+  padding: 8px;
+  display: flex; 
+  align-items: center;  
+}
+
+#logo-site{ /* logo do site*/
+    width: 182px;
+    height: 95px; /* larguraaa*/
+    margin-left: 10px;
+    margin-right: 800px;
+    border-radius: 10px;
+}
+
+#icone-pesquisa{
+    width: 20px;
+    height: 20px; /* larguraaa*/
+    margin-right: 10px; 
+    
+}
+
+header a{
+     text-decoration: none;/*tirar o sublinhado dos links*/
+    color:hsl(0, 33%, 96%); 
+    font-size: medium;
+}
+
+#pesquisa{
+    width: 200px;
+    height: 20px;
+ border-radius: 25px; /* Bordas arredondadas */
+    padding: 8px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     margin-right: 10px;
+}
+header button{ /* botões do cabeçalho*/
+    margin:10px;
+    width: auto;
+    height: 35px;
+    background-color: hsl(0, 95%, 44%);
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+ white-space: nowrap;
+}
+
+header button:hover{ 
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+
+
+.container-banner{
+    width: 100%;
+   height: 407px;
+    display: flex;
+    padding: 0px;
+    background-color: oklab(81.23899999999999% 0.01561 0.16539);
+}
+
+.p-1{
+    height: 407px;
+    width: 600px;
+    margin: 0%;
+}
+.p-1 img{
+    height: 407px;
+    width: 600px;
+    margin: 0%;
+}
+
+.p-2{
+   height: 407px;
+    width: 700px;
+    background-color: oklab(81.23899999999999% 0.01561 0.16539);
+    margin: 0 auto; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding: 20px; 
+    box-sizing: border-box; /* Inclui padding no cálculo da largura/altura */
+}
+
+.p-2 h1{
+      font-size: clamp(2.5rem, 5vw, 4rem); /* Torna o título maior e responsivo */
+    margin-bottom: 20px; 
+    text-align: center; 
+    flex-shrink: 0; /* Impede que o título encolha */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 25px; /* Bordas arredondadas */
+    padding: 8px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 600px; /* Ajuste a largura conforme necessário */
+    max-width: 90%; /* Para responsividade */
+}
+
+.search-input-wrapper,
+.location-input-wrapper {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Permite que ocupe o espaço disponível */
+}
+
+.search-input,
+.location-input {
+    border: none;
+    outline: none;
+    padding: 8px 10px;
+    font-size: 16px;
+    flex-grow: 1;
+    background-color: transparent; /* Remove o fundo padrão do input */
+}
+
+.search-icon,
+.microphone-icon,
+.location-icon {
+    color: #9aa0a6; /* Cor dos ícones padrão */
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.microphone-icon {
+    color: #4285f4; /* Cor azul para o ícone de microfone, como na imagem */
+    cursor: pointer;
+}
+
+.separator {
+    width: 1px;
+    height: 30px; /* Altura da linha divisória */
+    background-color: #dadce0; /* Cor da linha divisória */
+    margin: 0 15px; /* Espaçamento da linha divisória */
+}
+
+/* Estilos de placeholder */
+.search-input::placeholder,
+.location-input::placeholder {
+    color: #9aa0a6;
+}
+
+.p-2 button {
+    width: 150px; 
+    height: 45px;
+    background-color: lab(39.53% -45.5 43.5);
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    cursor: pointer; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 20px;
+}
+.p-2 button:hover{
+     background-color: lch(52.53% 77.78 136.26);
+}
+
+.p-2 a {
+    text-decoration: none;
+    color: hsl(0, 33%, 96%);
+    font-size: medium;
+    font-weight: bold; /* Deixa o texto do link mais visível */
+}
+
+
+.painel-vagas{
+    width: 100%;
+    height: auto;
+    padding: 0%;
+    margin: 0%;
+    border: 0cap;
+}
+
+.container-vagas{
+    display: grid; /* Ativa o CSS Grid para o container */
+    grid-template-columns: repeat(2, 1fr); /* Define 2 colunas de tamanho igual (1 fração de espaço) */
+    gap: 20px; /* Espaçamento entre as vagas (linhas e colunas) */
+    max-width: 1300px; /* Um max-width para o container para evitar que as vagas se espalhem demais */
+    margin: 40px auto; /* Centraliza o container na página e adiciona margem superior/inferior */
+    padding: 0 20px; /* Um pouco de padding lateral para telas menores */
+}
+
+
+.vaga {
+    background-color: #ffffff;
+    width: 623px; /* Largura ajustada para ser próxima à imagem */
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Espaçamento entre os blocos */
+}
+
+.job-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.company-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    object-fit: cover; /* Para garantir que a imagem não se distorça */
+}
+
+.header-info {
+    flex-grow: 1; /* Permite que ocupe o espaço restante */
+}
+
+.header-info h1 {
+    margin: 0;
+    font-size: 1.1em; /* Ajuste o tamanho da fonte conforme a imagem */
+    color: #333;
+    font-weight: 600;
+}
+
+.header-info h3 {
+    margin: 0;
+    font-size: 0.9em; /* Ajuste o tamanho da fonte conforme a imagem */
+    color: #666;
+    font-weight: 400;
+}
+
+.favorite-icon {
+    width: 24px;
+    height: 24px;
+    /* Se o seu ícone de coração já for roxo, não precisa de 'color' aqui. */
+    /* Caso contrário, se for um SVG que você quer colorir, você precisará de um CSS para o SVG ou usar uma imagem já colorida. */
+}
+
+/* Estilo para todos os ícones de imagem */
+.icon {
+    width: 24px; /* Tamanho padrão para os ícones */
+    height: 24px;
+    object-fit: contain; /* Garante que o ícone se ajuste sem distorção */
+    /* Se o seu ícone de coração precisar de uma cor específica, e for um SVG, você pode adicionar:
+    fill: #9253c3; */
+}
+
+/* Ajuste específico para os ícones dentro de .meta-item, se eles forem menores na imagem original */
+.meta-item .icon {
+    width: 20px;
+    height: 20px;
+}
+
+
+.job-meta {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
+    gap: 24px; /* Espaçamento entre os blocos de meta */
+    align-items: center;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.job-badges {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px; /* Espaço acima dos badges */
+}
+
+.badge {
+    background-color: #e0f2f7; /* Cor de fundo dos badges (azul claro da imagem) */
+    color: #007bff; /* Cor do texto dos badges */
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+.posted-date {
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 8px; /* Espaço acima da data de postagem */
+}
+
+.btn-details {
+    background-color: #28a745; /* Cor verde do botão */
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    width: 100%; /* Ocupa toda a largura do container */
+    margin-top: 16px; /* Espaço acima do botão */
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+}
+
+.btn-details:hover {
+    background-color: hsl(133, 65%, 27%); /* Um verde um pouco mais escuro no hover */
+}
+
+.btn-details a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: inherit; /* Herda a cor do botão */
+    display: block; /* Faz o link ocupar todo o botão */
+    text-align: center;
+}
+
+.main-footer {
+    background-color:  oklab(81.23899999999999% 0.01561 0.16539);
+    color: #ffffff; /* Cor do texto padrão para o footer */
+    padding: 60px 40px; /* Preenchimento interno para espaçamento */
+    display: grid; /* Usa CSS Grid para o layout das colunas */
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas de largura igual */
+    gap: 40px; /* Espaçamento entre as colunas */
+    width: 100%; /* Ocupa toda a largura disponível */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+/* Estilos para cada coluna do footer */
+
+
+.footer-column h4 {
+    font-size: 1.1em; /* Tamanho da fonte para os títulos das colunas */
+    color: lch(7.83% 2.65 144.46);
+    margin-top: 0;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-weight: 600; /* Um pouco mais de peso na fonte */
+}
+
+.footer-column ul {
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px; /* Espaçamento entre os itens da lista */
+}
+
+.footer-column ul li:last-child {
+    margin-bottom: 0; /* Remove a margem do último item */
+}
+
+.footer-column ul li a {
+    color: lch(7.7% 3.47 144.46); /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 0.95em; /* Tamanho da fonte para os links */
+    display: flex; /* Para alinhar ícones e texto */
+    align-items: center;
+    gap: 8px; /* Espaço entre o ícone e o texto */
+    transition: color 0.3s ease; /* Transição suave na cor ao passar o mouse */
+}
+
+.footer-column ul li a:hover {
+    color: hwb(50 47% 2%);
+}
+
+/* Estilo para os ícones sociais dentro dos links */
+.social-icon {
+    width: 20px; /* Tamanho dos ícones sociais */
+    height: 20px;
+    object-fit: contain; /* Garante que o ícone se ajuste sem distorção */
+    /* filter: invert(100%); Pode ser útil se seus ícones forem escuros e você quiser invertê-los para branco */
+}
+
+
+/* Estilos para a div .filtros */
+.filtros {
+    display: flex; /* Para que os botões fiquem lado a lado */
+    gap: 10px; /* Espaçamento entre os botões */
+    padding: 20px;
+    align-items: center; /* Alinha verticalmente os itens */
+    /* Você pode adicionar mais estilos aqui para a div filtros, se necessário */
+}
+
+.filtros h1 {
+    font-size: 1.5em; /* Ajuste o tamanho do título "Vagas Encontradas" */
+    margin-right: 400px; /* Espaçamento entre o título e os botões */
+    white-space: nowrap; /* Evita que o título quebre linha */
+    margin-left: 10px;
+}
+
+/* Estilo base para os botões de filtro */
+.filter-button {
+    background-color: #fff; /* Fundo branco */
+    border: 1px solid #dadce0; /* Borda cinza clara */
+    border-radius: 8px; /* Cantos arredondados */
+    padding: 10px 16px; /* Espaçamento interno */
+    display: flex; /* Para alinhar o texto e o ícone */
+    align-items: center; /* Centraliza verticalmente */
+    cursor: pointer; /* Indica que é clicável */
+    font-size: 1em; /* Tamanho da fonte */
+    color: #3c4043; /* Cor do texto */
+    font-weight: 500; /* Peso da fonte */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* Sombra suave */
+    transition: all 0.2s ease-in-out; /* Transição suave para hover e active */
+}
+
+.filter-button span {
+    margin-right: 8px; /* Espaçamento entre o texto e o ícone */
+}
+
+.filter-button .fas {
+    font-size: 0.8em; /* Tamanho do ícone de seta */
+    color: #70757a; /* Cor do ícone */
+}
+
+/* Efeito de hover (quando o mouse passa por cima) */
+.filter-button:hover {
+    border-color: #a6d9ff; /* Borda mais clara ao passar o mouse */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1); /* Sombra um pouco mais pronunciada */
+}
+
+/* Estilo para o botão selecionado (classe 'active') */
+.filter-button.active {
+    background-color: #e8f0fe; /* Fundo azul claro */
+    border-color: #1a73e8; /* Borda azul mais escura (como na imagem) */
+    color: #1a73e8; /* Cor do texto azul */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* Sombra ligeiramente diferente */
+}
+
+.filter-button.active .fas {
+    color: #1a73e8; /* Cor do ícone azul quando ativo */
+}
+
+/* Remova o estilo padrão de botões e links se eles estiverem afetando esses botões */
+button {
+    /* Exemplo: Resetar estilos de botões padrão */
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+button a {
+    text-decoration: none; /* Remove sublinhado de links */
+    color: inherit; /* Herda a cor do pai (button) */
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* --- Estilos para Telas Menores (Mobile First) --- */
+
+/* Ajustes para telas com largura máxima de 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Empilha os itens do cabeçalho */
+        height: auto; /* Altura automática */
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #logo-site {
+        margin: 0 0 10px 0; /* Centraliza a logo e adiciona margem inferior */
+        width: 150px;
+        height: auto;
+    }
+
+    #pesquisa {
+        width: 90%; /* Ocupa quase toda a largura */
+        margin-right: 0;
+        margin-bottom: 10px; /* Adiciona margem inferior */
+    }
+
+    header button {
+        width: 100%; /* Botões ocupam a largura total */
+        margin: 5px 0; /* Ajusta a margem dos botões */
+    }
+
+    .container-banner {
+        flex-direction: column; /* Empilha o banner e a imagem */
+        height: auto;
+    }
+
+    .p-1 {
+        width: 100%; /* Imagem ocupa a largura total */
+        height: auto;
+        display: none; /* Oculta a imagem em telas menores, se preferir */
+    }
+
+    .p-1 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .p-2 {
+        width: 100%; /* Conteúdo do banner ocupa a largura total */
+        padding: 15px;
+    }
+
+    .p-2 h1 {
+        font-size: clamp(1.8rem, 7vw, 2.5rem); /* Ajusta o tamanho da fonte do título */
+        margin-bottom: 15px;
+    }
+
+    .search-container {
+        flex-direction: column; /* Empilha os campos de busca e localização */
+        width: 95%;
+        padding: 10px;
+    }
+
+    .search-input-wrapper,
+    .location-input-wrapper {
+        width: 100%;
+        margin-bottom: 10px; /* Espaçamento entre os inputs */
+    }
+
+    .separator {
+        display: none; /* Oculta o separador */
+    }
+
+    .filtros {
+        flex-direction: column; /* Empilha os botões de filtro */
+        align-items: center;
+        padding: 15px;
+    }
+
+    .filtros h1 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .filter-button {
+        width: 90%; /* Botões de filtro ocupam mais largura */
+        margin-bottom: 10px;
+    }
+
+    .painel-vagas {
+        padding: 15px;
+    }
+
+    .container-vagas {
+        grid-template-columns: 1fr; /* Uma coluna para as vagas */
+        gap: 20px; /* Espaçamento entre as vagas */
+    }
+
+    .vaga {
+        padding: 15px;
+    }
+
+    .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .company-logo {
+        margin-bottom: 10px;
+    }
+
+    .job-meta {
+        flex-direction: column; /* Empilha os itens de metadados da vaga */
+        align-items: flex-start;
+    }
+
+    .meta-item {
+        margin-bottom: 8px; /* Espaçamento entre os itens */
+    }
+
+    .job-badges {
+        flex-wrap: wrap; /* Permite que os badges quebrem linha */
+        justify-content: flex-start;
+    }
+
+    .badge {
+        margin-bottom: 5px; /* Espaçamento entre os badges */
+    }
+
+    .main-footer {
+        flex-direction: column; /* Empilha as colunas do rodapé */
+        padding: 20px;
+    }
+
+    .footer-column {
+        margin-bottom: 20px; /* Espaçamento entre as colunas */
+        text-align: center;
+    }
+
+    .footer-column ul {
+        padding: 0;
+    }
+}
+
+/* Ajustes ainda menores para telas de celular (largura máxima de 480px) */
+@media (max-width: 480px) {
+    header button {
+        font-size: 0.9em; /* Diminui a fonte dos botões do cabeçalho */
+        height: 30px;
+    }
+
+    .p-2 h1 {
+        font-size: clamp(1.5rem, 8vw, 2rem); /* Ajuste ainda mais o título */
+    }
+
+    .search-input,
+    .location-input {
+        font-size: 14px; /* Diminui a fonte dos inputs de busca */
+    }
+
+    .filter-button {
+        padding: 8px 10px; /* Ajusta o padding dos botões de filtro */
+        font-size: 0.9em;
+    }
+
+    .btn-details {
+        font-size: 0.9em; /* Diminui a fonte do botão de detalhes */
+        padding: 8px 12px;
+    }
+}
