@@ -1,0 +1,148 @@
+<!DOCTYPE html> 
+<html lang="pt-br"> 
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Crie seu Currículo</title> 
+  <link rel="stylesheet" href="../Arquivos-css/style.css"> 
+  <link rel="stylesheet" href="../Arquivos-css/curristyle.css"> 
+</head>
+<body class="body-curriculo">
+     <header>
+<header>
+       <img src="../Images/Logos/logo.avif" alt="logo-site" id="logo-site"> 
+            <input type="text" id="pesquisa">
+            <img src="../Images/Icones/icone-pesquisa" alt="Ícone de icone-pesquisa" id="icone-pesquisa">
+            <button type="button" id="vagas-abertas"><a href="vagas-abertas.html">Vagas Abertas</a></button>
+            <button type="button"><a href="inicio.html">Inicio</a></button>
+    </header>
+        </header> 
+        <!-- <div class="imagem-fundo-curriculo">
+                <img src="Images/fundocurriculo.jpg" alt="Imagem de fundo" id="imagefundo">
+            </div> -->
+  <h1>Monte seu Currículo</h1>
+  <p class="explicacao">Preencha os campos abaixo para criar um currículo simples e completo. Este formulário foi feito para ajudar imigrantes a encontrar um emprego no Brasil.</p>
+
+<div class="fundo-curriculo">
+<form class="form-curriculo">
+    <!-- Sessão 1: Dados Pessoais -->
+    <fieldset> <!-- Agrupa os campos relacionados -->
+      <legend><strong>1. Dados Pessoais</strong></legend> <!-- Título da seção -->
+
+      <label>Nome completo</label> <!-- Texto explicando o que preencher -->
+      <input type="text" name="nome" required> <!-- Campo de texto obrigatório -->
+
+      <label>Email</label>
+      <input type="email" name="email" required>
+
+      <label>Telefone</label>
+      <input type="text" name="telefone" required>
+
+      <label>Cidade/Estado onde mora</label>
+      <input type="text" name="localizacao" required>
+    </fieldset>
+
+    <!-- Sessão 2: Objetivo Profissional -->
+    <fieldset>
+      <legend><strong>2. Objetivo Profissional</strong></legend>
+      <p class="explicacao">Descreva qual tipo de trabalho você procura (ex: ajudante geral, serviços de limpeza, cozinheiro, atendente, etc).</p>
+      <textarea name="objetivo" rows="3"></textarea> <!-- Área de texto para escrever livremente -->
+    </fieldset>
+
+    <!-- Sessão 3: Experiências de Trabalho -->
+    <fieldset>
+      <legend><strong>3. Experiência de Trabalho</strong></legend>
+      <p class="explicacao">Liste aqui os empregos que já teve, mesmo no seu país de origem.</p>
+
+      <label>Nome da empresa</label>
+      <input type="text" name="empresa1">
+
+      <label>Cargo (função)</label>
+      <input type="text" name="cargo1">
+
+      <label>Tempo de trabalho (ex: jan/2021 até dez/2022)</label>
+      <input type="text" name="tempo1">
+
+      <label>Atividades realizadas</label>
+      <textarea name="atividades1" rows="2"></textarea>
+    </fieldset>
+
+    <!-- Sessão 4: Formação Escolar -->
+    <fieldset>
+      <legend><strong>4. Formação Escolar</strong></legend>
+      <p class="explicacao">Marque seu nível de escolaridade.</p>
+      <select name="formacao"> <!-- Menu suspenso com opções -->
+        <option value="">Selecione</option>
+        <option value="ensino-fundamental">Ensino Fundamental (completo ou incompleto)</option>
+        <option value="ensino-medio">Ensino Médio</option>
+        <option value="tecnico">Curso Técnico</option>
+        <option value="superior">Ensino Superior</option>
+        <option value="outro">Outro</option>
+      </select>
+    </fieldset>
+
+    <!-- Sessão 5: Habilidades e Cursos -->
+    <fieldset>
+      <legend><strong>5. Cursos ou Habilidades</strong></legend>
+      <p class="explicacao">Você tem algum curso ou sabe fazer algo específico? Ex: costura, cozinhar, dirigir, informática básica, etc.</p>
+      <textarea name="habilidades" rows="3"></textarea>
+    </fieldset>
+
+    <!-- Sessão 6: Idiomas -->
+    <fieldset>
+      <legend><strong>6. Idiomas</strong></legend>
+
+      <label>Você fala português?</label>
+      <select name="portugues">
+        <option value="">Selecione</option>
+        <option value="bem">Sim, falo bem</option>
+        <option value="medio">Sim, um pouco</option>
+        <option value="nao">Ainda não</option>
+      </select>
+
+      <label>Outros idiomas que você fala</label>
+      <input type="text" name="idiomas">
+    </fieldset>
+
+    <!-- Botão final para enviar ou salvar o formulário -->
+    <button type="submit">Salvar Currículo</button>
+  </form>
+</div>
+  
+      <footer class="main-footer">
+        <div class="footer-column">
+            <h4>Sobre nós</h4>
+            <ul>
+                <li><a href="#">Quem somos </a></li>
+                <li><a href="#">Para pessoas candidatas</a></li>
+                <li><a href="#">Novidades</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Sobre a plataforma</h4>
+            <ul>
+                <li><a href="#">Central de Ajuda</a></li>
+                <li><a href="#">Falar com o Suporte</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Redes sociais</h4>
+            <ul>
+                <li><a href=""><img src="../Images/Icones/icone-instagram.png" alt="Instagram" class="social-icon"> @integraTech</a></li>
+                <li><a href=""><img src="../Images/Icones/icone-tiktok" alt="TikTok" class="social-icon"> @integraTech</a></li>
+                <li><a href=""><img src="../Images/Icones//icone-youtube.png" alt="YouTube" class="social-icon"> @integraTech</a></li>
+                <li><a href=""><img src="../Images/Icones//icone-linkedin.png" alt="LinkedIn" class="social-icon"> Newsletter: integraTech</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Termos de uso</h4>
+            <ul>
+                <li><a href="#">Política de privacidade</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

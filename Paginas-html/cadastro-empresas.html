@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Empregador </title>
+    <link rel="stylesheet" href="../Arquivos-css/cadastro-empresa.css">
+</head>
+<body>
+
+     <header>
+       <img src="../Images/Logos/logo.avif" alt="logo-site" id="logo-site"> 
+             <h1>Impulsione seu negócio. Cadastre sua empresa agora mesmo.</h1>
+   <button type="button"><a href="inicio-empregador.html"> Voltar</a></button>
+            
+    </header>
+
+    <main class="form-container">
+        <form action="#" method="POST" class="employer-register-form">
+            <h2>Dados da Empresa</h2>
+
+            <div class="form-group">
+                <label for="razaoSocial">Razão Social Completa *</label>
+                <input type="text" id="razaoSocial" name="razaoSocial" placeholder="Nome completo da empresa (Ex: ABC Soluções em TI Ltda.)" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nomeFantasia">Nome Fantasia (Opcional)</label>
+                <input type="text" id="nomeFantasia" name="nomeFantasia" placeholder="Nome comercial da empresa (Ex: ABC Tech)">
+            </div>
+
+            <div class="form-group">
+                <label for="cnpj">CNPJ *</label>
+                <input type="text" id="cnpj" name="cnpj" placeholder="XX.XXX.XXX/XXXX-XX" pattern="\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}" title="Formato: XX.XXX.XXX/XXXX-XX" required>
+                <small>Formato: 00.000.000/0000-00</small>
+            </div>
+
+            <div class="form-group address-group">
+                <label for="cep">CEP *</label>
+                <input type="text" id="cep" name="cep" placeholder="00000-000" pattern="\d{5}-\d{3}" title="Formato: 00000-000" required>
+                
+                <label for="logradouro">Logradouro *</label>
+                <input type="text" id="logradouro" name="logradouro" placeholder="Ex: Av. Brasil" required>
+
+                <label for="numero">Número *</label>
+                <input type="text" id="numero" name="numero" placeholder="123" required>
+
+                <label for="complemento">Complemento (Opcional)</label>
+                <input type="text" id="complemento" name="complemento" placeholder="Sala, andar, etc.">
+
+                <label for="bairro">Bairro *</label>
+                <input type="text" id="bairro" name="bairro" placeholder="Centro" required>
+
+                <label for="cidade">Cidade *</label>
+                <input type="text" id="cidade" name="cidade" placeholder="Florianópolis" required>
+
+                <label for="estado">Estado *</label>
+                <input type="text" id="estado" name="estado" placeholder="SC" required maxlength="2">
+            </div>
+
+            <div class="form-group">
+                <label for="telefoneEmpresa">Telefone de Contato da Empresa *</label>
+                <input type="tel" id="telefoneEmpresa" name="telefoneEmpresa" placeholder="(XX) XXXX-XXXX ou (XX) XXXXX-XXXX" pattern="^\(\d{2}\)\s?\d{4,5}-\d{4}$" title="Formato: (XX) XXXX-XXXX ou (XX) XXXXX-XXXX" required>
+            </div>
+
+            <div class="form-group">
+                <label for="emailEmpresa">E-mail Corporativo Oficial *</label>
+                <input type="email" id="emailEmpresa" name="emailEmpresa" placeholder="contato@suaempresa.com.br" required>
+            </div>
+
+            <div class="form-group">
+                <label for="siteEmpresa">Site da Empresa (URL) (Opcional)</label>
+                <input type="url" id="siteEmpresa" name="siteEmpresa" placeholder="https://www.suaempresa.com.br">
+            </div>
+
+            <div class="form-group">
+                <label for="logoEmpresa">Logotipo da Empresa (URL ou Upload)</label>
+                <input type="url" id="logoEmpresa" name="logoEmpresa" placeholder="URL da logo (ex: https://empresa.com/logo.png)">
+                </div>
+
+            <div class="form-group">
+                <label for="descricaoEmpresa">Breve Descrição da Empresa *</label>
+                <textarea id="descricaoEmpresa" name="descricaoEmpresa" rows="4" placeholder="Um pequeno resumo sobre o que sua empresa faz e sua missão." required></textarea>
+            </div>
+
+            <h2>Dados do Contato Responsável</h2>
+
+            <div class="form-group">
+                <label for="nomeContato">Nome Completo do Contato *</label>
+                <input type="text" id="nomeContato" name="nomeContato" placeholder="Seu nome completo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cargoContato">Cargo na Empresa *</label>
+                <input type="text" id="cargoContato" name="cargoContato" placeholder="Ex: Recrutador(a), Gerente de RH" required>
+            </div>
+
+            <div class="form-group">
+                <label for="emailContato">E-mail para Login e Notificações *</label>
+                <input type="email" id="emailContato" name="emailContato" placeholder="seuemail@exemplo.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha *</label>
+                <input type="password" id="senha" name="senha" placeholder="Mínimo de 8 caracteres" minlength="8" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmarSenha">Confirmar Senha *</label>
+                <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Repita sua senha" required>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="aceiteTermos" name="aceiteTermos" required>
+                <label for="aceiteTermos">Eu li e concordo com os <a href="#" target="_blank">Termos de Uso</a> e <a href="#" target="_blank">Política de Privacidade</a> *</label>
+            </div>
+
+            <button type="submit" class="submit-button"><a href="painel-empregador.html" id="button-a">Cadastrar</a></button>
+
+            <p class="login-link-container">Já tem uma conta? <a href="login-empregador.html">Faça login aqui</a></p>
+        </form>
+    </main>
+
+  <footer class="main-footer">
+        <div class="footer-column">
+            <h4>Sobre nós</h4>
+            <ul>
+                <li><a href="#">Quem somos </a></li>
+                <li><a href="#">Para pessoas candidatas</a></li>
+                <li><a href="#">Novidades</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Sobre a plataforma</h4>
+            <ul>
+                <li><a href="#">Central de Ajuda</a></li>
+                <li><a href="#">Falar com o Suporte</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Redes sociais</h4>
+            <ul>
+                <li><a href=""><img src="../Images/Icones/icone-instagram.png" alt="Instagram" class="social-icon"> @integraTech</a></li>
+                <li><a href=""><img src="../Images/Icones/icone-tiktok" alt="TikTok" class="social-icon"> @integraTech</a></li>
+                <li><a href=""><img src="../Images/Icones/icone-youtube.png" alt="YouTube" class="social-icon"> @integraTech</a></li>
+                <li><a href=""><img src="../Images/Icones/icone-linkedin.png" alt="LinkedIn" class="social-icon"> Newsletter: integraTech</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Termos de uso</h4>
+            <ul>
+                <li><a href="#">Política de privacidade</a></li>
+            </ul>
+        </div>
+    </footer> 
+    </body>
+</html>

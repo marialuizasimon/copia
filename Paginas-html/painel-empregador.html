@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Empregador </title>
+    <link rel="stylesheet" href="../Arquivos-css/painel-empregador.css">
+    </head>
+<body>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../Images/Logos/logo.avif" alt="Logo do Site" class="dashboard-logo">
+                <h3>Olá, integraTech!</h3>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="active"><a href="#">Dashboard</a></li>
+                    <li><a href="#">Minhas Vagas</a></li>
+                    <li><a href="#">Candidatos</a></li>
+                    <li><a href="#">Configurações da Empresa</a></li>
+                    <li><a href="inicio.html">Sair</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>&copy; 2025 IntegraTech</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="content-header">
+                <h2>Dashboard do Empregador</h2>
+                <button class="btn-primary-action"><a href="coloque-sua-vaga.html">Publicar Nova Vaga</a></button>
+            </header>
+
+            <section class="overview-cards">
+                <div class="card">
+                    <h3>Vagas Ativas</h3>
+                    <p class="card-number">5</p>
+                    <a href="#">Ver todas</a>
+                </div>
+                <div class="card">
+                    <h3>Candidaturas Recebidas</h3>
+                    <p class="card-number">32</p>
+                    <a href="#">Ver candidaturas</a>
+                </div>
+                <div class="card">
+                    <h3>Vagas em Rascunho</h3>
+                    <p class="card-number">2</p>
+                    <a href="#">Continuar editando</a>
+                </div>
+                <div class="card">
+                    <h3>Vagas Pendentes</h3>
+                    <p class="card-number">1</p>
+                    <a href="#">Ver detalhes</a>
+                </div>
+            </section>
+
+            <section class="recent-activity">
+                <h2>Atividade Recente</h2>
+                <div class="activity-item">
+                    <p><strong>Nova Candidatura:</strong> João Silva se candidatou para "Desenvolvedor(a) Full Stack".</p>
+                    <span>Há 10 minutos</span>
+                </div>
+                <div class="activity-item">
+                    <p><strong>Vaga Publicada:</strong> Sua vaga "Analista de Marketing Digital Pleno" foi ao ar!</p>
+                    <span>Há 2 horas</span>
+                </div>
+                <div class="activity-item">
+                    <p><strong>Nova Candidatura:</strong> Maria Oliveira se candidatou para "Analista de RH Júnior".</p>
+                    <span>Há 5 horas</span>
+                </div>
+            </section>
+
+            <section class="active-jobs-list">
+                <h2>Minhas Vagas Ativas</h2>
+                <div class="job-table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Título da Vaga</th>
+                                <th>Candidatos</th>
+                                <th>Modalidade</th>
+                                <th>Publicada Em</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Desenvolvedor(a) Full Stack Júnior</td>
+                                <td>15</td>
+                                <td>Remoto</td>
+                                <td>01/07/2025</td>
+                                <td class="status-active">Ativa</td>
+                                <td>
+                                    <button class="action-btn view-btn" title="Ver Candidatos">Ver Candidatos</button>
+                                    <button class="action-btn edit-btn" title="Editar Vaga">Editar</button>
+                                    <button class="action-btn pause-btn" title="Pausar Vaga">Pausar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Analista de Marketing Digital Pleno</td>
+                                <td>7</td>
+                                <td>Híbrido</td>
+                                <td>28/06/2025</td>
+                                <td class="status-active">Ativa</td>
+                                <td>
+                                    <button class="action-btn view-btn" title="Ver Candidatos">Ver Candidatos</button>
+                                    <button class="action-btn edit-btn" title="Editar Vaga">Editar</button>
+                                    <button class="action-btn pause-btn" title="Pausar Vaga">Pausar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Estagiário(a) de RH</td>
+                                <td>10</td>
+                                <td>Presencial</td>
+                                <td>20/06/2025</td>
+                                <td class="status-active">Ativa</td>
+                                <td>
+                                    <button class="action-btn view-btn" title="Ver Candidatos">Ver Candidatos</button>
+                                    <button class="action-btn edit-btn" title="Editar Vaga">Editar</button>
+                                    <button class="action-btn pause-btn" title="Pausar Vaga">Pausar</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>

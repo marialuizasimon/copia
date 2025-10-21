@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuncie Sua Vaga </title>
+    <link rel="stylesheet" href="../Arquivos-css/coloque-sua-vaga.css">
+</head>
+<body>
+
+   <header>
+       <img src="../Images/logo.avif" alt="logo-site" id="logo-site"> 
+             <h1>Encontre o talento ideal. Anuncie sua vaga em nosso site !</h1>
+            <button type="button"><a href="painel-empregador.html"> Voltar</a></button>
+            
+    </header>
+
+    <main class="form-container">
+        <form action="#" method="POST" class="job-post-form">
+            <h2>Informações Essenciais da Vaga</h2>
+
+            <div class="form-group">
+                <label for="tituloVaga">Título da Vaga *</label>
+                <input type="text" id="tituloVaga" name="tituloVaga" placeholder="Ex: Desenvolvedor(a) Full Stack Júnior" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nomeEmpresa">Nome da Empresa *</label>
+                <input type="text" id="nomeEmpresa" name="nomeEmpresa" placeholder="Nome completo da sua empresa" required>
+            </div>
+
+            <div class="form-group">
+                <label for="logoEmpresa">Logo da Empresa (URL ou Upload)</label>
+                <input type="url" id="logoEmpresa" name="logoEmpresa" placeholder="URL da logo (ex: https://empresa.com/logo.png)">
+                </div>
+
+            <div class="form-group location-group">
+                <label for="localVaga">Local de Trabalho *</label>
+                <input type="text" id="localVaga" name="localVaga" placeholder="Ex: Florianópolis - SC" required>
+                
+                <label for="modalidadeVaga">Modalidade *</label>
+                <select id="modalidadeVaga" name="modalidadeVaga" required>
+                    <option value="">Selecione a modalidade</option>
+                    <option value="presencial">Presencial</option>
+                    <option value="hibrido">Híbrido</option>
+                    <option value="remoto">Remoto</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="salarioVaga">Faixa Salarial (Opcional)</label>
+                <input type="text" id="salarioVaga" name="salarioVaga" placeholder="Ex: R$ 3.000 - R$ 4.500 ou A combinar + Benefícios">
+            </div>
+
+            <div class="form-group">
+                <label for="tipoContrato">Tipo de Contrato *</label>
+                <select id="tipoContrato" name="tipoContrato" required>
+                    <option value="">Selecione o tipo de contrato</option>
+                    <option value="clt">CLT</option>
+                    <option value="pj">PJ</option>
+                    <option value="estagio">Estágio</option>
+                    <option value="trainee">Trainee</option>
+                    <option value="freelancer">Freelancer</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="nivelExperiencia">Nível de Experiência *</label>
+                <select id="nivelExperiencia" name="nivelExperiencia" required>
+                    <option value="">Selecione o nível</option>
+                    <option value="junior">Júnior</option>
+                    <option value="pleno">Pleno</option>
+                    <option value="senior">Sênior</option>
+                    <option value="especialista">Especialista</option>
+                    <option value="gerencial">Gerencial</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="dataPublicacao">Data de Publicação</label>
+                <input type="date" id="dataPublicacao" name="dataPublicacao">
+            </div>
+
+            <h2>Sobre a Empresa</h2>
+            <div class="form-group">
+                <label for="descricaoEmpresa">Breve Descrição da Empresa *</label>
+                <textarea id="descricaoEmpresa" name="descricaoEmpresa" rows="5" placeholder="Fale sobre a sua empresa, missão e o que vocês fazem." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="culturaValores">Cultura e Valores (Palavras-chave)</label>
+                <input type="text" id="culturaValores" name="culturaValores" placeholder="Ex: colaborativo, inovador, diversidade">
+            </div>
+
+            <div class="form-group">
+                <label for="beneficios">Benefícios e Vantagens (Liste com vírgulas)</label>
+                <textarea id="beneficios" name="beneficios" rows="3" placeholder="Ex: Vale-refeição, Plano de saúde, Horário flexível, Day-off aniversário"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="premios">Prêmios e Reconhecimentos (Opcional)</label>
+                <input type="text" id="premios" name="premios" placeholder="Ex: GPTW 2023, Empresa Inovadora do Ano">
+            </div>
+
+            <h2>Detalhes da Posição</h2>
+            <div class="form-group">
+                <label for="resumoVaga">Resumo da Vaga *</label>
+                <textarea id="resumoVaga" name="resumoVaga" rows="4" placeholder="Contextualize o cargo e seu impacto na empresa." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="responsabilidades">Responsabilidades Principais *</label>
+                <textarea id="responsabilidades" name="responsabilidades" rows="7" placeholder="Liste as atividades diárias e semanais (um item por linha, se possível)." required></textarea>
+                <small>Separe as responsabilidades por linha para melhor formatação.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="requisitosEssenciais">Requisitos Essenciais *</label>
+                <textarea id="requisitosEssenciais" name="requisitosEssenciais" rows="6" placeholder="Liste as qualificações obrigatórias (um item por linha, se possível)." required></textarea>
+                <small>Separe os requisitos por linha para melhor formatação.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="requisitosDesejaveis">Requisitos Desejáveis (Opcional)</label>
+                <textarea id="requisitosDesejaveis" name="requisitosDesejaveis" rows="4" placeholder="Conhecimentos ou experiências que são diferenciais (um item por linha)."></textarea>
+                <small>Separe os requisitos por linha para melhor formatação.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="habilidadesComportamentais">Habilidades Comportamentais (Soft Skills - Opcional)</label>
+                <input type="text" id="habilidadesComportamentais" name="habilidadesComportamentais" placeholder="Ex: Proatividade, Comunicação, Trabalho em equipe">
+            </div>
+            
+            <h2>Como se Candidatar</h2>
+            <div class="form-group">
+                <label for="urlCandidatura">URL para Candidatura *</label>
+                <input type="url" id="urlCandidatura" name="urlCandidatura" placeholder="Link direto para a página de candidatura da vaga" required>
+            </div>
+
+            <div class="form-group">
+                <label for="prazoFinal">Prazo Final para Candidatura (Opcional)</label>
+                <input type="date" id="prazoFinal" name="prazoFinal">
+            </div>
+
+            <div class="form-group">
+                <label for="etapasProcesso">Etapas do Processo Seletivo (Opcional)</label>
+                <textarea id="etapasProcesso" name="etapasProcesso" rows="3" placeholder="Ex: Inscrição > Testes online > Entrevista com RH"></textarea>
+                <small>Detalhe as etapas para o candidato.</small>
+            </div>
+
+            <button type="submit" class="submit-button">Publicar Vaga</button>
+        </form>
+    </main>
+  <footer class="main-footer">
+        <div class="footer-column">
+            <h4>Sobre nós</h4>
+            <ul>
+                <li><a href="#">Quem somos </a></li>
+                <li><a href="#">Para pessoas candidatas</a></li>
+                <li><a href="#">Novidades</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Sobre a plataforma</h4>
+            <ul>
+                <li><a href="#">Central de Ajuda</a></li>
+                <li><a href="#">Falar com o Suporte</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Redes sociais</h4>
+            <ul>
+                <li><a href=""><img src="../Imagens/icone-instagram.png" alt="Instagram" class="social-icon"> @integraTech</a></li>
+                <li><a href=""><img src="../Imagens/icone-tiktok" alt="TikTok" class="social-icon"> @integraTech</a></li>
+                <li><a href=""><img src="../Imagens/icone-youtube.png" alt="YouTube" class="social-icon"> @integraTech</a></li>
+                <li><a href=""><img src="../Imagens/icone-linkedin.png" alt="LinkedIn" class="social-icon"> Newsletter: integraTech</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Termos de uso</h4>
+            <ul>
+                <li><a href="#">Política de privacidade</a></li>
+            </ul>
+        </div>
+    </footer> 
+    </body>
+</html>
